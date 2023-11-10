@@ -27,3 +27,20 @@ git rebase <branch>: Nhận các thay đổi trên nhánh chính sang nhánh tí
 
 git cherry pick: Copy commit từ nhánh này sang cho nhánh khác.
 checkout sang nhánh đích: git cherry-pick <commit_id>
+
+
+Tag:
+	- Là một con trỏ tới một commit
+	- Thường được sử dụng để đánh dấu các điểm release
+	- Lighweight tags: Trỏ đến một commit cụ thể
+	- Annotated tags: Đánh dấu các commit release, lưu nhiều loại dữ liệu hơn như: tagger name, email, date, tag message
+git tag <tag_name> <
+git tag -a <tag_name> -m "tag_message"
+git show <tag_name>: display info of tag
+git push <remote> <tag_name>: push a tag
+
+
+Squash: Kết hợp nhiều commit thành một. Được thực hiện khi merge nhánh.
+Có 2 cách để squash commit: 
+- git rebase -i
+- git merge --squash
